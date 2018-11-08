@@ -1,0 +1,40 @@
+
+#pragma once
+
+#include "glm/common.h"
+
+namespace cultlang {
+namespace glm
+{
+    
+    CULTLANG_GLM_EXPORTED extern craft::lisp::BuiltinModuleDescription BuiltinGlm;
+    CULTLANG_GLM_EXPORTED void make_glm_bindings(craft::instance<craft::lisp::Module> mod);
+
+
+    void make_vec_ops(craft::instance<craft::lisp::CultSemantics>& sem);
+    void make_mat_ops(craft::instance<craft::lisp::CultSemantics>& sem);
+}}
+
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::vec2)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::vec3)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::vec4)
+
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::uvec2)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::uvec3)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::uvec4)
+
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::ivec2)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::ivec3)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::ivec4)
+
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat2x2)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat2x3)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat2x4)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat3x2)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat3x3)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat3x4)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat4x2)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat4x3)
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::mat4x4)
+
+CRAFT_TYPE_DECLARE(CULTLANG_GLM_EXPORTED, glm::quat)

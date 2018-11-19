@@ -7,7 +7,7 @@ namespace _impl {
     std::string matPtr(T mat, std::string tname) {
         std::ostringstream out;
 
-        for(auto i = 0; i < w; i++)
+        for(size_t i =0; i < w; i++)
         {
 			out << "|";
 			for(auto j = 0; j < h - 1; j++)
@@ -179,7 +179,7 @@ namespace _impl
 		if((Cols * Rows) != args.size()) throw stdext::exception("Invalid Number of Arguments, expected: {0}", Cols * Rows);
 
 		float* data = (float*)res.get();
-		for(auto i = 0; i < (Cols * Rows); ++i)
+		for(size_t i =0; i < (Cols * Rows); ++i)
 		{
 			if(!args[i].isType<float>()) throw stdext::exception("Args must be of type float");
 			*data = *args[i].asType<float>();
